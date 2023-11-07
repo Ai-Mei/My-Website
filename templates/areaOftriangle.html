@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert to Uppercase</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_workpage.css') }}">
+    <link rel="icon" href="static/icon.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <a href="/"id="btn">Home</a>
+        <a href="/works"id="btn_1">Works</a>
+        <h1>Calculate the Area of a Triangle</h1>
+        <form action="/areaOftriangle" method="post">
+            <label for="inputbase">Enter the base:</label>
+            <input type="number" id="input" name="inputbase">
+            <br>
+            <label for="inputheight">Enter the height:</label>
+            <input type="number" id="input" name="inputheight">
+            <br>
+            <input type="submit" value="Calculate">
+        </form>
+        {% if result %}
+        <p>Area of the Triangle: <span>{{ result }}</span></p>
+        {% endif %}
+    </div>
+</body>
+</html>

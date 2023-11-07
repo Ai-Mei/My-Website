@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="static/icon.jpeg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="main">Welcome to Mae's Website</h1>
+        <nav>
+            <ul>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/works">Works</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+    <section>
+        <img src="static/stars.png" id="stars" alt="stars">
+        <img src="static/moon.png" id="moon" alt="moon">
+        <img src="static/mountains_behind.png" id="mountains_behind" alt="mountains_behind">
+        <h2 id="text">Hello /ᐠ - ˕ -マ Ⳋ</h2>
+        <a href="/works"id="btn">Explore my works</a>"
+        <img src="static/mountains_front.png" id="mountains_front" alt="mountains_front">
+    </section>
+    </header>
+    <div class="sec">
+        <h1 class="works">Welcome to my Programming Works</h1>
+        <p>Kindly click the link to use my work.</p>
+        <br></br>
+        <ul>
+            <div class="button-wrapper">
+                <li><a class="button" href="/touppercase">Convert to Uppercase</a></li>
+            </div>
+            <div class="button-wrapper">
+                <li><a class="button" href="/areaOfcircle">Area of a Circle</a></li>
+            </div>
+            <div class="button-wrapper">
+                <li><a class="button" href="/areaOftriangle">Area of a Triangle</a></li>
+            </div>
+        </ul>
+    </div>
+    
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 +'px';
+            moon.style.top = value * 1 +'px';
+            mountains_behind.style.top = value * 0.5 +'px';
+            mountains_front.style.top = value * 0 +'px';
+            text.style.marginRight = value * 4 +'px';
+            text.style.marginTop = value * 1.5 +'px';
+            btn.style.marginTop = value * 1.40 +'px';
+
+            if (value > 100) {
+                btn.style.display = 'none';
+            } else {
+                btn.style.display = 'inline-block';
+            }
+        })
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_profile.css') }}">
+    <link rel="icon" href="static/icon.jpeg" type="image/x-icon">
+</head>
+<body>
+    <a href="/"id="btn">Home</a>"
+    <div class="details">
+        <h1>Hi, I'm <span>Princess Mae</span></h3>
+        <p>Full Name: Princess Mae F. Purcia
+            <br>|Sophomore| 
+            <br>|Bachelor of Science in Computer Engineering|
+            <br>Section: BSCPE 2-4
+            <br>Subject: Data Structure and Algorithm</p>
+            <br>
+            <br>
+            <br>
+            <div class="text-container">
+                <h3>⋆｡°✩ Ad astra per aspera ⋆｡°✩</h3>
+                <h4>...through hardships to the stars...</h4>
+                <div class="gif-container">
+                  <img src="static/heart.gif" alt="GIF">
+                </div>
+              </div>
+              
+    </div>
+    <section>
+        <img src="{{url_for('static', filename='stars.png')}}" alt="background">
+    </section>
+    <div class="images">
+        <img src="{{url_for('static', filename='shape.png')}}"class="shape">
+        <img src="{{url_for('static', filename='profile_picture.png')}}"class="profile_picture">
+    </div>
+</body>
+</html>
