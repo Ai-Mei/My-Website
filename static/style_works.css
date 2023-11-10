@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width:100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(48, 6, 148, 0.7),rgba(38, 14, 46, 0.7)), url(works.gif);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box
+}
+h1{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h1:hover{
+    color: #1c0522;
+}
+p{
+    color: #fff;
+    font-size: 20px;
+    line-height: 15px;
+}
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%
+}
+#btn{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    color:#1c0522;
+    font-size:12px;
+    padding:12px 5px;
+    background: #cbc6f8;
+    border:0;
+    text-decoration: none;
+    display: inline-block;
+    padding:8px 15px;
+    border-radius: 20px;
+    z-index: 9;
+    transform: translateY(100px);
+}
+#btn:hover{
+    background-color: #1c0522;; 
+    color: #ffffff;
+}
+.works {
+    margin-top: 20px; 
+}
+.works ul {
+    list-style-type: none;
+    padding: 0;
+}
+.works li {
+    display: inline;
+    margin-right: 20px; 
+}
+.works li a {
+    text-decoration: none;
+    color: #1c0522; 
+    font-weight: bold; 
+    padding: 100px 20px;
+    border: 1px solid #1c0522;; 
+    border-radius: 5px; 
+    background-color: hsl(258, 94%, 82%); 
+    transition: background-color 0.3s, color 0.3s; 
+}
+.works li a:hover {
+    background-color: #1c0522;; 
+    color: #fff;
+}
