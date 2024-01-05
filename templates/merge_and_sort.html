@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        #btn {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            background: #fff;
+            color: #2b1055;
+            font-size: 1em;
+            position: fixed; 
+            top: 20px; 
+            left: 20px; 
+            padding: 10px 20px; 
+            z-index: 1000;
+        }
+        #btn:hover {
+            background-color: rgba(192, 161, 241, 0.8);
+            color: #ffffff;
+        }
+        #btn_1 {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 20px;
+            background: #fff;
+            color: #2b1055;
+            font-size: 1em;
+            position: fixed; 
+            top: 20px; 
+            left: 120px; 
+            padding: 10px 20px; 
+            z-index: 1000;
+        }
+        #btn_1:hover {
+            background-color: rgba(192, 161, 241, 0.8);
+            color: #ffffff;
+        }
+
+
+
+        body {
+            background-image: url('/static/merge_and_sort.gif'); 
+            background-size: cover; 
+            font-family: 'Brush Script MT', cursive; 
+            margin: 0; 
+            padding: 0; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; 
+            height: 100vh; 
+        }
+
+
+
+        h1 {
+            color: rgb(20, 0, 36); 
+            font-size: 120px; 
+            margin-top: 10px; 
+        }
+
+        h1:hover{
+            color: rgb(0, 0, 0); 
+
+        }
+
+        h2, p {
+            color: rgb(26, 25, 29); 
+            font-size: 25px; 
+            margin: 10px 10px; 
+        }
+
+        form {
+            background-color: rgba(215, 188, 245, 0.747);
+            padding: 30px; 
+            border-radius: 10px;
+            margin-top:0; 
+            max-width: 600px; 
+            width: 100%; 
+        }
+
+        label, input {
+            font-size: 25px;
+            display: block;
+            margin-bottom: 20px; 
+            width:100%; 
+        }
+
+        .result-frame, .error-frame {
+            background-color: rgba(215, 188, 245, 0.747); 
+            padding: 20px; 
+            border-radius: 10px;
+            margin-top: 10px; 
+            max-width: 620px; 
+            width: 100%; 
+        }
+
+        .result-frame:hover, .error-frame:hover {
+            background-color: #2e00634d;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+        }
+
+        button {
+        background-color: #c88aec; 
+        color: rgb(2, 2, 2); 
+        padding: 15px 20px; 
+        font-size: 18px; 
+        border: none; 
+        border-radius: 5px; 
+        cursor: pointer; 
+        transition: background-color 0.3s; 
+    }
+
+    button:hover {
+        background-color: #2e154b;
+    }
+
+    </style>
+
+    <title>Merge and Sort</title>
+</head>
+<body>
+    <div class="container">
+        <a href="/"id="btn">Home</a>
+        <a href="/works"id="btn_1">Works</a>
+        <h1>Merge and Sort</h1>
+
+        <form method="POST" action="/merge_and_sort">
+            <label for="list1_values">List 1 Values:</label>
+            <input type="text" name="list1_values" id="list1_values" placeholder="Enter values separated by spaces" required>
+
+            <label for="list2_values">List 2 Values:</label>
+            <input type="text" name="list2_values" id="list2_values" placeholder="Enter values separated by spaces" required>
+
+            <button type="submit">Merge and Sort</button>
+        </form>
+
+        {% if result %}
+            <div class="result-frame">
+                <h2>Sorted List Result:</h2>
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+
+        {% if error_message %}
+            <div class="error-frame">
+                <h2>Error:</h2>
+                <p>{{ error_message }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
